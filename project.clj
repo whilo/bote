@@ -1,6 +1,6 @@
-(defproject bote "0.1.0-SNAPSHOT"
-  :description "A Clojure SMTP server frontend."
-  :url "http://example.com/FIXME"
+(defproject net.polyc0l0r/bote "0.1.0"
+  :description "A SMTP server as a Clojure library."
+  :url "https://github.com/ghubber/bote"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.6.0"]

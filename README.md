@@ -4,6 +4,8 @@
 
 ## Usage
 
+Add `[net.polyc0l0r/bote "0.1.0"]` to your project.clj dependencies.
+
 ~~~clojure
 user> (require '[bote.core :refer [create-smtp-server]])
 nil
