@@ -1,6 +1,6 @@
 # bote
 
-[Inspired by](http://nakkaya.com/2012/07/25/yet-another-disposable-e-mail-web-application-in-clojure/) `bote` implements an smtp server as a small clojure library. The underlying [subethasmtp library](https://code.google.com/p/subethasmtp/) supports encryption with TLS and implementation of authentication exchanges.
+[Inspired by this blog post](http://nakkaya.com/2012/07/25/yet-another-disposable-e-mail-web-application-in-clojure/) `bote` implements an smtp server as a small clojure library. The underlying [subethasmtp library](https://code.google.com/p/subethasmtp/) supports encryption with TLS and implementation of authentication exchanges.
 
 ## Usage
 
@@ -26,7 +26,7 @@ user> (send-message {:host "localhost"
                  :subject "IMPORTANT!!!1!"
                  :body "hello world!"})
 SunCertPathBuilderException unable to find valid certification path to requested target  sun.security.provider.certpath.SunCertPathBuilder.engineBuild (SunCertPathBuilder.java:196)
-user> ; this happens because it is a self-signed test cert, try without tls
+user> ; this happens *in postal* because it is a self-signed test cert, try without tls
 user> (.stop smtp-server)
 nil
 user> (def smtp-server (create-smtp-server #(reset! received %)
@@ -74,6 +74,7 @@ nil
 ## TODO
 * Wrap authentication in a clojuresque way.
 * parse attachments
+* explore spam filtering techniques (separate project, but important for real world applications)
 
 ## License
 

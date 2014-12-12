@@ -30,7 +30,7 @@
 
 (defn create-smtp-server [message-fn & {:keys [accept-fn? port enable-tls? require-tls?]
                                    :or {accept-fn? (fn [from to] true)
-                                        port 25}}]
+                                        port 2525}}]
   (let [server
         (org.subethamail.smtp.server.SMTPServer.
          (org.subethamail.smtp.helper.SimpleMessageListenerAdapter.
