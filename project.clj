@@ -5,8 +5,6 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [org.clojars.nakkaya/subethasmtp "3.1.7"]
-                 [com.draines/postal "1.11.3"]
-                 [org.clojars.kjw/slf4j "1.5.5"]
-                 [org.clojars.kjw/slf4j-simple "1.5.5"]]
+                 [com.draines/postal "1.11.3"]]
   :jvm-opts ["-Djavax.net.ssl.keyStore=resources/serverKeyStore.key"
              "-Djavax.net.ssl.keyStorePassword=123456"])
